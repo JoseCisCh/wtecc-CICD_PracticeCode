@@ -1,0 +1,19 @@
+name: FirstCIWorkflow
+
+on:
+  push: 
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  # The next is the name of the job (build)
+  build: 
+    # The next sets the runner of the job
+    runs-on: ubuntu-latest
+
+    # Indicates which Python image to use
+    # must match the version used to develop
+    # in this project of course
+    container: python:3.9-slim
